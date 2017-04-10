@@ -20,19 +20,18 @@ source("lib/libraries.r", encoding = "UTF-8")
 ```
 
 # Izbira teme
-
-Za vzorec bomo prikazali nekaj podatkov o slovenskih občinah.
+Predstavila bom kriptografsko valuto bitcoin, njeno uporabo in vrednost. 
 
 ***
 
 # Obdelava, uvoz in čiščenje podatkov
+uvoz podatkov: https://www.quandl.com/data/BCHAIN/ETRAV-Bitcoin-Estimated-Transaction-Volume
+
 
 ```{r uvoz, echo=FALSE, message=FALSE}
 source("uvoz/uvoz.r", encoding = "UTF-8")
 ```
-
-Uvozili smo podatke o občinah v obliki CSV s statističnega urada ter v obliki HTML
-z Wikipedije. Poglejmo si začetka obeh uvoženih razpredelnic.
+***
 
 ```{r razpredelnice}
 kable(head(druzine))
