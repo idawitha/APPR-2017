@@ -6,6 +6,7 @@ Repozitorij z gradivi pri predmetu APPR v študijskem letu 2016/17
 Za temo projekta sem izbrala kriptovaluto Bitcoin. Predstavljeni bodo podatki o uporabi in vrednosti le-te od leta 2009 naprej. Ker valuta temelji na odprtokodnem protokolu in ni odvisna od centralne banke ali drugega regulatornega organa so kakršnikoli preverljivi podatki bili težko dostopni. Podatki so v CSV obliki. Tabela bo vsebovala podatke : 
 - vrednost valute na trgu (številska spremenljivka)
 - vsota denarja v obtoku (številska spremenljivka)
+- število uporabnikov (številska spremenčjivka)
 - čas (razvrščevalna spremenljivka)
 
 
