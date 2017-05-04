@@ -3,12 +3,11 @@
 prva.vrstica <- c("datum", "vrednost_v_USD")
 #Funkcija za uvoz podatkov
 uvozi<-function(){
-  return(read.csv(file="podatki/market-price2.csv",
-                  col.names=prva.vrstica,
-                  header=FALSE,
-                  na.strings = "-",
-                  fileEncoding = "UTF-8",
-                  as.is = FALSE))
+  tab <- read_csv(file="podatki/market-price2.csv",
+                  col_names=prva.vrstica,
+                  na = "-")
+  tab$datum <- parse_datetime(tab$datum, "%D %R")
+  tab
 }
 
 #Zapisemo podatke v razpredelnico tabela
@@ -36,6 +35,7 @@ uvozi2<-function(){
   tab$datum <- parse_datetime(tab$datum, "%D %R")
   tab
 }
+
 
 #Zapisemo podatke v razpredelnico tabela
 tabela2 <- uvozi2()

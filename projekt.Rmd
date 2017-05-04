@@ -33,7 +33,26 @@ Kasneje bom primerjala Bitcoin z ostalimi kriptovalutami.
 ***
 
 # Obdelava, uvoz in čiščenje podatkov
-uvoz podatkov: 
+Uvoz podatkov: 
+Podatke za prvi dve tabeli sem dobila na spletni strani https://blockchain.info/ v CSV obliki. 
+
+Podatki v 1. tabeli: 
+- datum, čas
+- vrednost valute v USD
+-minimalna vrednost
+-maksimalna vrednost
+-povprečna vrednost
+
+Podatki v 2. tabeli : 
+- datum, čas
+- vsota valute v obtoku
+
+
+Čiščenje podatkov : 
+- potrebno je bilo odstraniti nekatere podatke oziroma jih klasificirati kot datum in čas
+- potrebno je bilo dodati stolpce za povprečje, maksimum in minimum
+- klasificiranje številskih spremenljivk
+
 
 
 ```{r uvoz, echo=FALSE, message=FALSE}
