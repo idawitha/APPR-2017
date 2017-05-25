@@ -9,6 +9,10 @@ Za temo projekta sem izbrala kriptovaluto Bitcoin. Predstavljeni bodo podatki o 
 - število uporabnikov (številska spremenljivka)
 - čas (razvrščevalna spremenljivka)
 
+Napotki : 
+- minimalna cena,maksimalna cena, začetna, končna, mediana
+- izberi borzo 
+
 Kasneje bom primerjala Bitcoin z ostalimi kriptovalutami. 
 
 

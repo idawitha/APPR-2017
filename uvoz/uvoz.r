@@ -42,12 +42,14 @@ tabela2 <- uvozi2()
 # Druga tabela v XML
 #Število transakcij na dan(Total number of unique bitcoin transactions per day.Vrednosti so v k)
 library("rjson")
-json_file <- fromJSON("https://www.quandl.com/api/v3/datasets/BCHAIN/NTRAN.json?api_key=BopYvFzzxoSmWe3syXhH")
-
+library(httr)
+library(dplyr)
+json_file <- GET("https://www.quandl.com/api/v3/datasets/BCHAIN/NTRAN.json?api_key=BopYvFzzxoSmWe3syXhH") %>%
+  content(as = "text") %>% fromJSON()
+data <- json_file$dataset$data %>% sapply(c) %>% t() %>% data.frame()
+# uporabi še parsdate parse number
 # json_data <- fromJSON(paste(readLines(json_file), collapse=""))
-
-json_data <- fromJSON(file=json_file)
-
+# json_data <- fromJSON(file=json_file)
 # naslovi <-c("datum", "št transakcij * 10 ^3" )
-strsplit(json_file, split)
-names(json_file)<-c("datum","vrednost")
+#ker so vektorji v datoteki dolžine 1 bi rada da so dolžine 2
+
