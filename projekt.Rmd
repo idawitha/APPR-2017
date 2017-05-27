@@ -49,7 +49,7 @@ Podatki v 2. tabeli :
 
 
 Čiščenje podatkov : 
-- potrebno je bilo odstraniti nekatere podatke oziroma jih klasificirati kot datum in čas
+- potrebno je bilo odstraniti nekatere podatke oziroma jih označiti kot datum in čas
 - potrebno je bilo dodati stolpce za povprečje, maksimum in minimum
 - klasificiranje številskih spremenljivk
 
