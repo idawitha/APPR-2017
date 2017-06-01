@@ -28,7 +28,7 @@ tabela$minimalna_vrednost <- as.double(tabela$minimalna_vrednost)
 prva.vrstica2 <- c("datum", "BTC")
 #Funkcija za uvoz podatkov
 uvozi2<-function(){
-  tab <- read_csv(file="podatki/bitcoins in circulation.csv",
+  tab <- read_csv(file="podatki/bitcoins_in_circulation.csv",
                   col_names=prva.vrstica2,
                   na = "-")
   tab$datum <- parse_datetime(tab$datum, "%D %R")
@@ -43,7 +43,21 @@ tabela2$BTC <- as.double(tabela2$BTC)
 
 
 
+# Druga tabela v XML
+#Število transakcij na dan(Total number of unique bitcoin transactions per day.Vrednosti so v k)
+library("rjson")
+library(httr)
+library(dplyr)
+json_file <- GET("https://www.quandl.com/api/v3/datasets/BCHAIN/NTRAN.json?api_key=BopYvFzzxoSmWe3syXhH") %>%
+  content(as = "text") %>% fromJSON()
+data <- json_file$dataset$data %>% sapply(c) %>% t() %>% data.frame()
+# uporabi še parsdate parse number
+# json_data <- fromJSON(paste(readLines(json_file), collapse=""))
+# json_data <- fromJSON(file=json_file)
+# naslovi <-c("datum", "št transakcij * 10 ^3" )
+#ker so vektorji v datoteki dolžine 1 bi rada da so dolžine 2
 
+<<<<<<< HEAD
 # # Funkcija, ki uvozi občine iz Wikipedije
 # uvozi.obcine <- function() {
 #   link <- "http://sl.wikipedia.org/wiki/Seznam_ob%C4%8Din_v_Sloveniji"
@@ -69,3 +83,5 @@ tabela2$BTC <- as.double(tabela2$BTC)
 #   }
 #   return(tabela)
 # }
+=======
+>>>>>>> bc6c4600cbf66f1c5696aabd18210761258369b4
